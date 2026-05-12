@@ -1,36 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
+
 <head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
+  <meta charset="UTF-8" />
 
-  <style>
-    body {
-      background: #0f172a;
-      color: white;
-      font-family: Arial;
-      text-align: center;
-      padding-top: 100px;
-    }
+  <title>My Blog</title>
 
-    h1 {
-      font-size: 60px;
-    }
+  <link rel="stylesheet" href="style.css" />
 
-    p {
-      color: #94a3b8;
-      font-size: 24px;
-    }
-  </style>
+  <!-- Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- 数学公式 -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+  />
+
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js">
+  </script>
+
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js">
+  </script>
+
+  <!-- 代码高亮 -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-dark.min.css"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js/lib/common.min.js"></script>
+
 </head>
 
 <body>
 
-  <h1>Hello World</h1>
+  <div id="app">
 
-  <p>
-    我的第一个 GitHub 网站
-  </p>
+    <!-- 左侧 -->
+    <aside id="sidebar">
+
+      <h1>My Blog</h1>
+
+      <div class="category">
+
+        <h2>数学</h2>
+
+        <button onclick="loadArticle('articles/math/linear.md')">
+          线性代数
+        </button>
+
+      </div>
+
+      <div class="category">
+
+        <h2>AI</h2>
+
+        <button onclick="loadArticle('articles/ai/opencv.md')">
+          OpenCV入门
+        </button>
+
+      </div>
+
+    </aside>
+
+    <!-- 右侧 -->
+    <main id="content">
+
+      <div id="article">
+        请选择文章
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

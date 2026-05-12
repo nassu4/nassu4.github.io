@@ -46,27 +46,49 @@
 
       <h1>My Blog</h1>
 
+     <div class="category">
+
+  <div class="category-title" onclick="toggleCategory(this)">
+
+    <span class="arrow">▼</span>
+
+    <span>数学</span>
+
+  </div>
+
+  <div class="category-content">
+
+    <button onclick="loadArticle('articles/math/linear.md')">
+      线性代数
+    </button>
+
+    <button onclick="loadArticle('articles/math/group.md')">
+      群论
+    </button>
+
+  </div>
+
+</div>
+
       <div class="category">
 
-        <h2>数学</h2>
+  <div class="category-title" onclick="toggleCategory(this)">
 
-        <button onclick="loadArticle('articles/math/linear.md')">
-          线性代数
-        </button>
+    <span class="arrow">▼</span>
 
-      </div>
+    <span>AI</span>
 
-      <div class="category">
+  </div>
 
-        <h2>AI</h2>
+  <div class="category-content">
 
-        <button onclick="loadArticle('articles/ai/2026_5_12.md')">
-          如何更好地利用AI
-        </button>
+    <button onclick="loadArticle('articles/ai/2026_5_12.md')">
+      如何更好利用AI
+    </button>
 
-      </div>
+  </div>
 
-    </aside>
+</div>
 
     <!-- 右侧 -->
     <main id="content">

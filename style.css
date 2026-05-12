@@ -101,3 +101,49 @@ body {
   border-radius: 12px;
   overflow: hidden;
 }
+/* 分类标题 */
+
+.category-title {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  transition: 0.2s;
+}
+
+.category-title:hover {
+  background: #1e293b;
+}
+
+/* 箭头 */
+
+.arrow {
+  color: #60a5fa;
+  transition: transform 0.2s;
+}
+
+/* 子内容 */
+
+.category-content {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+/* 折叠状态 */
+
+.category.collapsed .category-content {
+  display: none;
+}
+
+/* 箭头旋转 */
+
+.category.collapsed .arrow {
+  transform: rotate(-90deg);
+}

@@ -26,3 +26,12 @@ async function loadArticle(path) {
     hljs.highlightElement(block)
   })
 }
+
+function toggleCategory(element) {
+
+  // 找到整个 category
+  const category = element.parentElement
+
+  // 切换 collapsed 类
+  category.classList.toggle("collapsed")
+}

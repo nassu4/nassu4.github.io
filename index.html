@@ -1,107 +1,67 @@
 <!DOCTYPE html>
 <html lang="zh">
-
-<head>
-  <meta charset="UTF-8" />
-
-  <title>My Blog</title>
-
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Markdown -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-  <!-- 数学公式 -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-  />
-
-  <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js">
-  </script>
-
-  <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js">
-  </script>
-
-  <!-- 代码高亮 -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-dark.min.css"
-  />
-
-  <script src="https://cdn.jsdelivr.net/npm/highlight.js/lib/common.min.js"></script>
-
-</head>
-
-<body>
-
-  <div id="app">
-
-    <!-- 左侧 -->
-    <aside id="sidebar">
-
-      <h1>知识就是力量</h1>
-
-     <div class="category">
-
-  <div class="category-title" onclick="toggleCategory(this)">
-
-    <span class="arrow">▼</span>
-
-    <span>数学</span>
-
-  </div>
-
-  <div class="category-content">
-
-    <button onclick="loadArticle('articles/math/linear.md')">
-      线性代数
-    </button>
-
-    <button onclick="loadArticle('articles/math/group.md')">
-      群论
-    </button>
-
-  </div>
-
-</div>
-
-      <div class="category">
-
-  <div class="category-title" onclick="toggleCategory(this)">
-
-    <span class="arrow">▼</span>
-
-    <span>AI</span>
-
-  </div>
-
-  <div class="category-content">
-
-    <button onclick="loadArticle('articles/ai/2026_5_12.md')">
-      如何更好利用AI
-    </button>
-
-  </div>
-
-</div>
-</aside>
-    <!-- 右侧 -->
-    <main id="content">
-
-      <div id="article">
-        欢迎来到nassu的博客
-      </div>
-
-    </main>
-
-  </div>
-
-  <script src="script.js"></script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 数学公式 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"
+    ></script>
+    <!-- 代码高亮 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-dark.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js/lib/common.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 左侧 -->
+      <aside id="sidebar">
+        <h1>知识就是力量</h1>
+        <div class="category">
+          <div class="category-title" onclick="toggleCategory(this)">
+            <span class="arrow">▼</span>
+            <span>数学</span>
+          </div>
+          <div class="category-content">
+            <button onclick="loadArticle('articles/math/linear.md')">
+              线性代数
+            </button>
+            <button onclick="loadArticle('articles/math/group.md')">
+              群论
+            </button>
+          </div>
+        </div>
+        <div class="category">
+          <div class="category-title" onclick="toggleCategory(this)">
+            <span class="arrow">▼</span>
+            <span>AI</span>
+          </div>
+          <div class="category-content">
+            <button onclick="loadArticle('articles/ai/2026_5_12.md')">
+              如何更好利用AI
+            </button>
+          </div>
+        </div>
+      </aside>
+      <!-- 右侧 -->
+      <main id="content">
+        <div id="article">欢迎来到nassu的博客</div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

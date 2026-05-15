@@ -31,6 +31,17 @@ body {
   font-size: 32px;
 }
 
+/* Navigation bar image in the sidebar */
+#navigation_bar {
+  width: 260px;
+  height: 50px;
+  display: block;
+  margin: 0 0 0 -60px;  
+  object-fit: contain;
+  zoom: 1.5;
+}
+
+
 .category {
   margin-bottom: 30px;
 }
@@ -167,4 +178,13 @@ body {
 
 #article table thead th {
   background: #f3f4f6;
+}
+
+/* Images: make img tags adapt to container width */
+#article img,
+#content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 12px 0;
 }

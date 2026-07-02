@@ -13,6 +13,27 @@ body {
 #app {
   display: flex;
   height: 100vh;
+  position: relative;
+}
+
+#sidebar-toggle {
+  position: absolute;
+  top: 50%;
+  left: 248px;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 32px;
+  height: 48px;
+  border: none;
+  background: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: left 0.25s ease, background 0.25s ease;
+}
+
+#sidebar-toggle:hover {
+  background: #222222;
 }
 
 /* 左侧栏 */
@@ -23,7 +44,19 @@ body {
   color: #ffffff;
   border-right: 1px solid #222222;
   padding: 20px;
-  overflow-y: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: transform 0.25s ease, padding 0.25s ease;
+}
+
+#sidebar.collapsed {
+  width: 0;
+  padding: 0;
+  border-right: none;
+}
+
+#app.sidebar-collapsed #sidebar-toggle {
+  left: 0;
 }
 
 #sidebar h1 {

@@ -154,3 +154,24 @@ function toggleCategory(element) {
   // 切换 collapsed 类
   category.classList.toggle("collapsed")
 }
+
+const sidebar = document.getElementById("sidebar")
+const app = document.getElementById("app")
+const sidebarToggle = document.getElementById("sidebar-toggle")
+
+if (sidebar && app && sidebarToggle) {
+  const updateSidebarToggle = () => {
+    const collapsed = sidebar.classList.contains("collapsed")
+    app.classList.toggle("sidebar-collapsed", collapsed)
+    sidebarToggle.textContent = collapsed ? "▶" : "◀"
+    sidebarToggle.setAttribute("aria-label", collapsed ? "展开侧边栏" : "收起侧边栏")
+    sidebarToggle.title = collapsed ? "展开侧边栏" : "收起侧边栏"
+  }
+
+  sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed")
+    updateSidebarToggle()
+  })
+
+  updateSidebarToggle()
+}
